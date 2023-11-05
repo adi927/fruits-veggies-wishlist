@@ -1,0 +1,9 @@
+.wrapper {
+  width: 500px;
+  height: 800px;
+  padding: 30px;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
