@@ -10,18 +10,39 @@
   align-items: center;
   margin-bottom: 10px;
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 15px 12px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
-  cursor: pointer;
   color: white;
 }
 
 .fruit {
-  background-color: rgb(129, 0, 0);
+  background-color: #5aaa95;
+  color: black;
 }
 
 .vegetable {
-  background-color: darkgreen;
+  background-color: #006992;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.deleteButton {
+  border: none;
+  width: 50px;
+  height: 28px;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background-color: #ebebeb;
+  color: black;
 }

@@ -23,26 +23,33 @@ const Form = ({ setProducts, products }) => {
 
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.h1}>Lista zakupów owoców</h1>
-      <input
-        type="text"
-        value={input}
-        onChange={({ target }) => setInput(target.value)}
-        className={styles.input}
-      />
-      <button onClick={AddProduct} className={styles.button}>
-        KLIKAJ
-      </button>
-      <label className={styles.checkboxLabel}>
-        <p className={styles.p}>Czy produkt jest owocem?</p>
+      <h1 className={styles.h1}>Lista zakupów produktów</h1>
+      <div className={styles.formField}>
+        <input
+          type="text"
+          value={input}
+          onChange={({ target }) => setInput(target.value)}
+          className={styles.input}
+        />
+        <button onClick={AddProduct} className={styles.button}>
+          DODAJ
+        </button>
+      </div>
+      {isError ? (
+        <p className={styles.pError}>Błąd, proszę wprowadzić dane</p>
+      ) : null}
+      <div className={styles.checkboxParent}>
+        <label className={styles.checkboxLabel} htmlFor="checkbox">
+          Czy produkt jest owocem?
+        </label>
         <input
           type="checkbox"
+          id="checkbox"
           value={check}
           onChange={({ target }) => setCheck(target.checked)}
           className={styles.checkbox}
         />
-      </label>
-      {isError ? <p>BŁĄD</p> : null}
+      </div>
     </div>
   );
 };
